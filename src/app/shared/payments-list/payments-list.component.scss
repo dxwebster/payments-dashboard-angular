@@ -1,0 +1,203 @@
+:host {
+  width: 100%;
+
+  .payments-list-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 3rem;
+    }
+
+    .add-payment-button-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: 1rem 0 2rem;
+    }
+
+    .filter-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--white);
+      padding: 2rem;
+
+      border-top-right-radius: 0.8rem;
+      border-top-left-radius: 0.8rem;
+
+      .search-container {
+        display: flex;
+        gap: 1rem;
+
+        button.filter {
+          height: 3.5rem;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 1rem;
+
+          border-radius: 0.6rem;
+          color: var(--body-text);
+          font-weight: 600;
+          font-size: 1.2rem;
+        }
+
+        form {
+          justify-content: space-between;
+
+          input {
+            width: 25rem;
+            height: 3.5rem;
+            padding-left: 1rem;
+          }
+
+          input[type="search"] {
+            border: 1px solid gray;
+            padding: 0.2em 0.4em;
+            border-radius: 0.2em;
+
+            &:placeholder-shown + .search-icon {
+              visibility: visible;
+            }
+
+            &::-webkit-search-cancel-button {
+              visibility: hidden;
+            }
+          }
+
+          .search-icon {
+            visibility: hidden;
+          }
+
+          .search-icon {
+            position: absolute;
+            top: 1.2rem;
+            right: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .pagination-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        label {
+          font-size: 1.2rem;
+          color: var(--body-text);
+        }
+
+        select {
+          width: 7rem;
+          height: 3rem;
+          font-size: 1.6rem;
+          color: var(--secondary-text);
+          border-radius: 0.6rem;
+          border: 1px solid var(--border);
+
+          padding: 15px 15px;
+          background: transparent;
+        }
+
+        .pages-number {
+          ::ng-deep {
+            .ngx-pagination {
+              font-size: 1.4rem;
+              margin-bottom: 0;
+
+              .ng-star-inserted {
+                margin-left: 0.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .payments-table-container {
+      width: 100%;
+      min-height: 55rem;
+      position: relative;
+      background: var(--white);
+      margin-bottom: 1rem;
+      padding: 2rem;
+
+      border-bottom-right-radius: 0.8rem;
+      border-bottom-left-radius: 0.8rem;
+
+      td,
+      th {
+        font-size: 1.4rem;
+        width: 100%;
+
+        a {
+          color: var(--body-text);
+        }
+      }
+
+      tr.table-header {
+        display: flex;
+        width: 100%;
+        padding: 1.2rem 0;
+        border-bottom: 1px solid var(--border);
+
+        .th_item {
+          display: flex;
+          padding: 1rem 2.5rem;
+
+          a,
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+
+      tr.table-row {
+        display: flex;
+
+        &:nth-of-type(odd) {
+          background: var(--light-blue);
+        }
+
+        .td_item {
+          height: 8rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.5rem;
+          padding-left: 2.5rem;
+
+          span {
+            color: var(--secondary-text);
+          }
+
+          button {
+            background: none;
+            cursor: pointer;
+          }
+        }
+
+        .action-buttons {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+
+      .image-error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+<section class="payments-list-container">
+  <h1>Meus pagamentos</h1>
+
+  <div class="add-payment-button-container">
+    <button class="btn btn_submit" (click)="openDialog(null)">Adicionar Pagamento</button>
+  </div>
+
+  <div class="filter-container">
+    <div class="search-container">
+      <form class="search">
+        <div class="form-group__flex-columm">
+          <div class="input-relative-container">
+            <input type="search" class="form-control" placeholder="Buscar por nome" #campoBusca />
+
+            <div class="search-icon">
+              <img src="assets/icons/search.svg" alt="Buscar Tarefa" />
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <button class="filter">
+        <img src="assets/icons/filter.svg" alt="FilterIcon" width="100%" />
+        Filtrar
+      </button>
+    </div>
+
+    <div class="pagination-container">
+      <div class="pages-number">
+        <pagination-controls
+          (pageChange)="currentPage = $event"
+          previousLabel="Anterior"
+          nextLabel="Próxima"
+        ></pagination-controls>
+      </div>
+    </div>
+  </div>
+
+  <table class="payments-table-container">
+    <tr class="table-header">
+      <th class="th_item">
+        <a class="header_sort" (click)="sort('user')">
+          Usuário
+          <span *ngIf="key == 'user'">{{ reverse ? "▲" : "▼" }}</span>
+        </a>
+      </th>
+
+      <th class="th_item">
+        <a class="header_sort" (click)="sort('title')">
+          Título
+          <span *ngIf="key == 'title'">{{ reverse ? "▲" : "▼" }}</span>
+        </a>
+      </th>
+
+      <th class="th_item">
+        <a class="header_sort" (click)="sort('date')">
+          Data
+          <span *ngIf="key == 'date'">{{ reverse ? "▲" : "▼" }}</span>
+        </a>
+      </th>
+
+      <th class="th_item">
+        <a class="header_sort" (click)="sort('value')">
+          Valor
+          <span *ngIf="key == 'value'">{{ reverse ? "▲" : "▼" }}</span>
+        </a>
+      </th>
+
+      <th class="th_item">
+        <a class="header_sort" (click)="sort('isPayed')">
+          Pago
+          <span *ngIf="key == 'isPayed'">{{ reverse ? "▲" : "▼" }}</span>
+        </a>
+      </th>
+
+      <th class="th_item"></th>
+    </tr>
+
+    <ng-template
+      *ngIf="!loading"
+      ngFor
+      let-payment
+      [ngForOf]="
+        payments
+          | orderBy: key:reverse
+          | searchPipe: search
+          | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }
+      "
+    >
+      <tr class="table-row" *ngIf="payment.name">
+        <td class="td_item">
+          {{ payment.name }}<span>@{{ payment.username }}</span>
+        </td>
+        <td class="td_item">{{ payment.title }}</td>
+        <td class="td_item">
+          {{ payment.date | date: "mediumDate":"locale":"pt-BR" }}
+          <span>{{ payment.date | date: "shortTime" }}</span>
+        </td>
+        <td class="td_item">{{ payment.value | currency: "BRL" }}</td>
+
+        <td class="td_item">
+          <ng-template [ngIf]="payment.isPayed" [ngIfElse]="notPayed">
+            <input type="checkbox" id="scales" name="scales" checked disabled />
+          </ng-template>
+
+          <ng-template #notPayed>
+            <input type="checkbox" id="scales" name="scales" disabled />
+          </ng-template>
+        </td>
+
+        <td class="td_item action-buttons">
+          <button (click)="openDialog(payment)">
+            <img src="assets/icons/edit.svg" alt="edit" width="75%" />
+          </button>
+
+          <button (click)="deleteElement(payment.id)">
+            <img src="assets/icons/delete.svg" alt="delete" width="75%" />
+          </button>
+        </td>
+      </tr>
+    </ng-template>
+
+    <div *ngIf="loading" class="loading-spinner">
+      <img src="assets/spining.svg" alt="loading" />
+    </div>
+
+    <div class="image-error" *ngIf="apiError">
+      <h1>Ops... Tente novamente</h1>
+      <img src="assets/search-error.png" alt="Erro de pesquisa" width="30%" />
+    </div>
+  </table>
+</section>

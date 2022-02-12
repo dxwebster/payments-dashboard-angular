@@ -1,0 +1,15 @@
+.toast {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40rem;
+  height: 6rem;
+
+  left: calc(50% - 20rem);
+  top: 1rem;
+  font-size: 1.6rem;
+  transition: all 200ms;
+  z-index: 99999;
+}

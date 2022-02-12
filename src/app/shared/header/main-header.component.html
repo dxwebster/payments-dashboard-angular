@@ -1,0 +1,18 @@
+<header>
+  <div class="logo-content" routerLink="/">
+    <img src="assets/logo-dash.svg" alt="logo" width="100%" />
+  </div>
+
+  <div class="avatar-content">
+    <img class="avatar" routerLink="/profile" src="assets/avatar.png" alt="logo" width="100%" />
+    <div class="profile">
+      <h2 class="hello">Olá, {{ currentUser.name }}</h2>
+
+      <ul class="options">
+        <li routerLink="/"><span>Pagamentos</span></li>
+        <li routerLink="/profile"><span>Perfil</span></li>
+        <li (click)="logout()"><span>Sair</span></li>
+      </ul>
+    </div>
+  </div>
+</header>

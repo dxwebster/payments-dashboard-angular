@@ -1,0 +1,73 @@
+:host {
+  header {
+    width: 100%;
+    height: 9rem;
+    padding: 0 9rem;
+    position: fixed;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--navy-blue);
+  }
+
+  .logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    img {
+      width: 15rem;
+      cursor: pointer;
+    }
+  }
+
+  .avatar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    img.avatar {
+      cursor: pointer;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      color: var(--light-blue);
+
+      h2 {
+        width: 100%;
+        color: var(--light-blue);
+        font-size: 1.6rem;
+        white-space: nowrap;
+      }
+
+      .options {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.4rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+
+        li:first-child::after,
+        li:nth-child(2)::after {
+          content: "|";
+          color: var(--light-blue);
+          margin-left: 1rem;
+        }
+
+        li > span:hover {
+          text-decoration: underline;
+          filter: opacity(0.6);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
