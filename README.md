@@ -4,7 +4,7 @@
 
 <h3 align=center>
 
-💻 **Acesse a aplicação [aqui](https://dxwebster.github.io/test-front/)**
+💻 **Acesse a aplicação [aqui](https://dxwebster.github.io/picpay-desafio-frontend/)**
 
 </h3>
 
@@ -70,13 +70,12 @@
 
 - Angular CLI: 12.1.4
 - Node: 12.20.2
-
 ## 📥 Como Rodar?
 
 - Clonar Repositório: `git clone https://github.com/dxwebster/payments-dashboard`
 - Instalar dependências: `npm install`
-- Rodar `ng serve` para iniciar o servidor de desenvolvimento.
-- A Aplicação estará disponível na porta `http://localhost:4200/`
+- Executar `ng serve` para iniciar o servidor de desenvolvimento.
+- A aplicação estará disponível na porta `http://localhost:4200/`
 
 ## 📕 Licença
 
