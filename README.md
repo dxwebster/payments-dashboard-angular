@@ -1,4 +1,4 @@
-<h1 align=center>Payments Dashboard</h1>
+<h1 align=center>Payments Dashboard (Angular)</h1>
 
 <p align=center>Aplicação de listagem de pagamentos (CRUD) com login com autenticação de usuário, com tabela de itens, paginação, filtragem e página de perfil.
 
@@ -19,10 +19,10 @@
 
 ## 🛠 Tecnologias utilizadas
 
--  Angular
--  Angular Material
--  Angular Animation
--  Json server
+-  angular
+-  angular material
+-  angular animation
+-  json-server
 -  ngx-order-pipe
 -  ngx-pagination
 -  sass
