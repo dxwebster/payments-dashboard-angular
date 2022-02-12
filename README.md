@@ -86,6 +86,13 @@
 - Executar `ng serve` para iniciar o servidor de desenvolvimento.
 - A aplicação estará disponível na porta `http://localhost:4200/`
 
+
+## Deploy no GithubPages
+
+- Instalar a cli do github pages para angular `ng add angular-cli-ghpages`
+- Executar `ng deploy` para fazer a build em produção automaticamente
+- Aguardar um pouco para o github pages atualizar
+
 ## 📕 Licença
 
 Todos os arquivos incluídos aqui, incluindo este _Readme_, estão sob Licença MIT.<br>
