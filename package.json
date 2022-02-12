@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d build",
     "api": "json-server --watch db.json"
   },
+  "homepage": "https://dxwebster.github.io/picpay-desafio-frontend",
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.1.4",
