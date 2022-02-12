@@ -1,12 +1,21 @@
 <h1 align=center>Payments Dashboard</h1>
 
-<p align=center>Aplicação de listagem de pagamentos (CRUD), com tabela de itens, paginação, filtragem, login com autenticação de usuário e página de perfil.
+<p align=center>Aplicação de listagem de pagamentos (CRUD) com login com autenticação de usuário, com tabela de itens, paginação, filtragem e página de perfil.
 
 <h3 align=center>
 
 💻 **Acesse a aplicação [aqui](https://dxwebster.github.io/picpay-desafio-frontend/)**
 
 </h3>
+
+<p align=center>
+
+<h5 align=center>
+<img src="readme/Home.png" width=600><br>
+
+</h5>
+
+</p>
 
 ## 🛠 Tecnologias utilizadas
 
