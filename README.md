@@ -4,11 +4,11 @@
 
 <h3 align=center>
 
-<!-- 💻 **Acesse a aplicação [aqui](https://dxwebster.github.io/test-front/)** -->
+💻 **Acesse a aplicação [aqui](https://dxwebster.github.io/test-front/)**
 
 </h3>
 
-## Tecnologias utilizadas
+## 🛠 Tecnologias utilizadas
 
 -  Angular
 -  Angular Material
@@ -18,7 +18,7 @@
 -  ngx-pagination
 -  sass
 
-## Features implementadas:
+## ✨ Features implementadas:
 
 ### Página de Login
 - Formulário para autenticação do usuário
@@ -48,7 +48,7 @@
 - Navegação para páginas da aplicação (Pagamentos e Perfil)
 - Botão sair
 
-## Melhorias necessárias:
+## 🚧 Melhorias necessárias:
 
 1. Página de Perfil
 - Atual: é necessário fazer logout para atualizar os dados do usuário editados na página de perfil
@@ -66,12 +66,12 @@
 - Atual: Ao clique do botão, o usuário é automaticamente deslogado da aplicação
 - Melhoria: Mostrar dialog pedindo confirmação para deslogar
 
-## Setup do projeto
+## 🛠 Setup do projeto
 
 - Angular CLI: 12.1.4
 - Node: 12.20.2
 
-## Como Rodar?
+## 📥 Como Rodar?
 
 - Clonar Repositório: `git clone https://github.com/dxwebster/payments-dashboard`
 - Instalar dependências: `npm install`
